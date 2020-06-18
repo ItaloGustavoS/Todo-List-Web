@@ -18,19 +18,24 @@ body {
   font-weight: 300;
   font-size: 1.5rem;
   background-color: var(--clr-primary);
-  color: var(--clr-light);
+  color: white;
   display: grid;
-  grid: "header header header header" auto "...... lists  active ......" auto/1fr minmax(100px, 300px) minmax(250px, 500px) 1fr;
+  grid:
+    "header header header header" auto "...... lists  active ......" auto/1fr minmax(
+      100px,
+      300px
+    )
+    minmax(250px, 500px) 1fr;
 }
 
 .title {
   grid-area: header;
   text-align: center;
-  font-size: calc(7vw + 2rem);
+  font-size: 50px;
   font-weight: 900;
-  color: rgba(0, 0, 0, 0.1);
+  color: white;
   letter-spacing: 2px;
-  margin: -0.3em 0 0.5em;
+  margin: 5px 0 1em;
 }
 
 .all-tasks {
@@ -215,7 +220,7 @@ form {
   border: 2px solid currentColor;
   border-radius: 50%;
   -webkit-transform: scale(1);
-          transform: scale(1);
+  transform: scale(1);
   transition: -webkit-transform 300ms ease-in-out;
   transition: transform 300ms ease-in-out;
   transition: transform 300ms ease-in-out, -webkit-transform 300ms ease-in-out;
@@ -224,7 +229,7 @@ form {
 .task:hover .custom-checkbox,
 [type="checkbox"]:focus + label .custom-checkbox {
   -webkit-transform: scale(1.2);
-          transform: scale(1.2);
+  transform: scale(1.2);
   color: var(--clr-primary);
 }
 
@@ -248,9 +253,9 @@ form {
   height: 3px;
   background: currentColor;
   -webkit-transform: scaleX(0);
-          transform: scaleX(0);
+  transform: scaleX(0);
   -webkit-transform-origin: right;
-          transform-origin: right;
+  transform-origin: right;
   transition: -webkit-transform 150ms ease-in-out;
   transition: transform 150ms ease-in-out;
   transition: transform 150ms ease-in-out, -webkit-transform 150ms ease-in-out;
@@ -258,9 +263,9 @@ form {
 
 [type="checkbox"]:checked + label::after {
   -webkit-transform: scaleX(1);
-          transform: scaleX(1);
+  transform: scaleX(1);
   -webkit-transform-origin: left;
-          transform-origin: left;
+  transform-origin: left;
 }
 
 .delete-stuff {
